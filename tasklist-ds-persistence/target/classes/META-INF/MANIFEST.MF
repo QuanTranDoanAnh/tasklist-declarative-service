@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1522545813867
+Build-Jdk: 1.8.0_131
+Built-By: QuanTDA1
+Bundle-ManifestVersion: 2
+Bundle-Name: Tasklist DS Persistence
+Bundle-SymbolicName: net.lr.tasklist.ds.tasklist-ds-persistence
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Import-Package: javax.persistence;version="[2.1,3)",javax.persistence.cr
+ iteria;version="[2.1,3)",net.lr.tasklist.ds.model;version="[1.0,2)",org
+ .apache.aries.jpa.template;version="[1.0,2)",org.slf4j;version="[1.7,2)
+ "
+Provide-Capability: osgi.service;objectClass:List<String>="net.lr.taskli
+ st.ds.model.TaskService"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compone
+ nt)(version>=1.3.0)(!(version>=2.0.0)))",osgi.service;filter:="(objectC
+ lass=net.lr.tasklist.ds.model.TaskService)";effective:=active,osgi.serv
+ ice;filter:="(objectClass=org.apache.aries.jpa.template.JpaTemplate)";e
+ ffective:=active,osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/net.lr.tasklist.ds.persistence.impl.InitHelp
+ er.xml,OSGI-INF/net.lr.tasklist.ds.persistence.impl.TaskServiceImpl.xml
+Tool: Bnd-3.3.0.201609221906
